@@ -73,6 +73,7 @@ export default function RootLayout() {
             ),
           }}
         />
+
         <Tabs.Screen
           name="profile"
           options={{
@@ -82,7 +83,20 @@ export default function RootLayout() {
             ),
           }}
         />
-      </Tabs>
+
+        <Tabs.Screen
+          name="contact"
+          options={{
+            title: 'Contact Us',
+            tabBarIcon: ({ color }) => (
+              <IconSymbol size={28} name="person.fill" color={color} />
+            ),
+          }}
+        />
+         
+      
+      </Tabs> 
+      
       <StatusBar style="auto" />
     </ThemeProvider>
   );

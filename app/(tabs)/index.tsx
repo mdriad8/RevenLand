@@ -11,6 +11,7 @@ import {
   Dimensions,
 } from 'react-native';
 import { AntDesign, Ionicons } from '@expo/vector-icons';
+import { Link } from 'expo-router';
 
 const services = [
   {
@@ -83,7 +84,15 @@ const Index = () => {
           showsHorizontalScrollIndicator={false}
         />
       </View>
+      <View style={styles.servicesContainer}>
+      <Link href="/contact" style={styles.link}>
+        <Text style={styles.sectionTitle}>Our Affiliation</Text>
+      </Link>
+    </View>
+
+
     </ScrollView>
+
   );
 };
 
@@ -175,6 +184,9 @@ const styles = StyleSheet.create({
   serviceDescription: {
     fontSize: 14,
     color: '#555',
+  },
+  link: {
+    textDecorationLine: 'none',
   },
 });
 
